@@ -7,7 +7,6 @@ plugins {
 
 android {
     compileSdk = AppConfig.compileSdk
-    buildToolsVersion = AppConfig.buildTools
 
     defaultConfig {
         applicationId = AppConfig.default.applicationId
@@ -49,11 +48,11 @@ android {
 }
 
 dependencies {
-    implementation(Libraries.androidX.coreKtx)
-    implementation(Libraries.androidX.appCompat)
-    implementation(Libraries.androidX.constraintLayout)
-    implementation(Libraries.androidX.navigation.fragment)
-    implementation(Libraries.androidX.navigation.ui)
-    implementation(Libraries.androidX.navigation.ui)
-    implementation(Libraries.google.material)
+    implementation(libs.androidX.coreKtx)
+    implementation(libs.androidX.appCompat)
+    implementation(libs.androidX.constraintLayout)
+    implementation(libs.androidX.navigation.fragment)
+    implementation(libs.androidX.navigation.ui)
+    implementation(libs.androidX.navigation.ui)
+    implementation(libs.google.material)
 }
