@@ -1,0 +1,33 @@
+[versions]
+androidxAppCompat = "1.4.1"
+androidxCoreKtx = "1.2.0"
+androidxConstraintLayout = "2.1.3"
+androidxNavigation = "2.4.1"
+androidxKotlinCompilerExtensionVersion = "1.2.0-rc01"
+androidxTest = "1.4.0"
+androidxExt = "1.1.3"
+coroutinesTest = "1.6.0"
+jUnit = "5.8.2"
+kotlin = "1.6.21"
+kotlinKsp = "1.6.21-1.0.6"
+mockito = "4.3.1"
+googleMaterial = "1.5.0"
+gradle = "7.2.1"
+gradleAndroid = "2.3.0"
+
+[libraries]
+androidX-appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidxAppCompat" }
+androidX-constraintLayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidxConstraintLayout" }
+androidX-coreKtx = { module = "androidx.core:core-ktx", version.ref = "androidxCoreKtx" }
+androidX-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidxNavigation" }
+androidX-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidxNavigation" }
+google-material = { module = "com.google.android.material:material", version.ref = "googleMaterial" }
+gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+#gradleApi = { module = "com.android.tools.build:gradle-api", version.ref = "androidGradlePlugin" }
+
+test-jUnit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jUnit" }
+test-jUnit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "jUnit" }
+test-jUnit-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "jUnit" }
+test-mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+test-mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito" }
+kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }

@@ -9,7 +9,6 @@ object AppConfig {
     val flavor1 = Flavor1
     val flavor2 = Flavor2
 
-
     object Default {
         const val name = "default"
         const val applicationId = "com.uteke.conventions"
