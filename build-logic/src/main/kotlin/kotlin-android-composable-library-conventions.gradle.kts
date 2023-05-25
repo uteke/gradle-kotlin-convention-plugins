@@ -5,5 +5,10 @@ plugins {
 @Suppress("UnstableApiUsage")
 android {
     buildFeatures.compose = true
-    composeOptions.kotlinCompilerExtensionVersion = libs.kotlinCompilerVersion
+    composeOptions.kotlinCompilerExtensionVersion = libs.versionKotlinCompiler
+}
+
+dependencies {
+    implementation(platform(libs.libAndroidxComposeBom))
+    implementation(libs.libAndroidxComposeFoundation)
 }

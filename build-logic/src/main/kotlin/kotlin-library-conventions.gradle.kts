@@ -1,13 +1,10 @@
 plugins {
-    id("java-library")
-    id("kotlin")
-    id("kotlin-conventions")
+    `java-library`
+    kotlin("jvm")
 }
 
-sourceSets {
-    map {
-        it.java.srcDir("src/${it.name}/kotlin")
-    }
+kotlin {
+    jvmToolchain(jdkVersion = 11)
 }
 
 task("testUnitTest") {

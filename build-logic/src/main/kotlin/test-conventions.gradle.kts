@@ -3,11 +3,10 @@ import org.gradle.kotlin.dsl.dependencies
 @Suppress("UnstableApiUsage")
 dependencies {
     val testImplementation by configurations
-    testImplementation(libs.testJunitApi)
-    testImplementation(libs.testJunitEngine)
-    testImplementation(libs.testJunitParams)
-    testImplementation(libs.testMockitoCore)
-    testImplementation(libs.testMockitoJunit)
+    testImplementation(libs.libTestJunitApi)
+    testImplementation(libs.libTestJunitEngine)
+    testImplementation(libs.libTestJunitParams)
+    testImplementation(libs.libTestMockk)
 }
 
 tasks.withType<Test> {

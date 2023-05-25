@@ -10,25 +10,28 @@ import org.gradle.kotlin.dsl.getByType
 internal val Project.libs: VersionCatalog
     get() = extensions.getByType<VersionCatalogsExtension>().named("libs")
 
-internal val VersionCatalog.androidxCore: Provider<MinimalExternalModuleDependency>
-    get() = findLibraryOrThrow("androidX-coreKtx")
-internal val VersionCatalog.kotlinCompilerVersion: String
-    get() = findVersionOrThrow("androidxKotlinCompilerExtensionVersion")
-internal val VersionCatalog.testJunitApi: Provider<MinimalExternalModuleDependency>
-    get() = findLibraryOrThrow("test-jUnit-api")
-internal val VersionCatalog.testJunitEngine: Provider<MinimalExternalModuleDependency>
-    get() = findLibraryOrThrow("test-jUnit-engine")
-internal val VersionCatalog.testJunitParams: Provider<MinimalExternalModuleDependency>
-    get() = findLibraryOrThrow("test-jUnit-params")
-internal val VersionCatalog.testMockitoCore: Provider<MinimalExternalModuleDependency>
-    get() = findLibraryOrThrow("test-mockito-core")
-internal val VersionCatalog.testMockitoJunit: Provider<MinimalExternalModuleDependency>
-    get() = findLibraryOrThrow("test-mockito-junit")
+internal val VersionCatalog.versionKotlinCompiler: String
+    get() = findVersionOrThrow("androidxKotlinCompiler")
 
-private fun VersionCatalog.findLibraryOrThrow(alias: String) =
-    findDependency(alias)
-        .orElseThrow { NoSuchElementException("Library $alias not found in version catalog") }
+internal val VersionCatalog.libDesugar: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("desugar")
+internal val VersionCatalog.libAndroidxComposeBom: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("androidX-compose-bom")
+internal val VersionCatalog.libAndroidxComposeFoundation: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("androidX-compose-foundation")
+internal val VersionCatalog.libTestJunitApi: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("test-jUnit-api")
+internal val VersionCatalog.libTestJunitEngine: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("test-jUnit-engine")
+internal val VersionCatalog.libTestJunitParams: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("test-jUnit-params")
+internal val VersionCatalog.libTestMockk: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("test-mockk")
+
+private fun VersionCatalog.findLibraryOrThrow(name: String) =
+    findLibrary(name)
+        .orElseThrow { NoSuchElementException("Library $name not found in version catalog") }
 private fun VersionCatalog.findVersionOrThrow(name: String) =
-    findVersion("androidxKotlinCompilerExtensionVersion")
+    findVersion(name)
         .orElseThrow { NoSuchElementException("Version $name not found in version catalog") }
         .requiredVersion
