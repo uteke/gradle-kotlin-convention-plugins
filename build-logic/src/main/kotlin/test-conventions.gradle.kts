@@ -1,6 +1,5 @@
 import org.gradle.kotlin.dsl.dependencies
 
-@Suppress("UnstableApiUsage")
 dependencies {
     val testImplementation by configurations
     testImplementation(libs.libTestJunitApi)

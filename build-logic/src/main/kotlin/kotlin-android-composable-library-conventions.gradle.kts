@@ -2,7 +2,6 @@ plugins {
     id("kotlin-android-library-conventions")
 }
 
-@Suppress("UnstableApiUsage")
 android {
     buildFeatures.compose = true
     composeOptions.kotlinCompilerExtensionVersion = libs.versionKotlinCompiler
@@ -11,4 +10,9 @@ android {
 dependencies {
     implementation(platform(libs.libAndroidxComposeBom))
     implementation(libs.libAndroidxComposeFoundation)
+    implementation(libs.libAndroidxComposeCompiler)
+    implementation(libs.libAndroidxComposeMaterial3)
+    implementation(libs.libAndroidxComposeUiToolingPreview)
+
+    debugImplementation(libs.libAndroidxComposeUiTooling)
 }

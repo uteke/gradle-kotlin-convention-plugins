@@ -1,15 +1,16 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
+    kotlin("android")
+    id("kotlin-conventions")
     id("test-conventions")
 }
 
-@Suppress("UnstableApiUsage")
 android {
     compileSdk = AppConfig.compileSdk
+    namespace = "com.uteke.conventions"
 
     defaultConfig {
-        applicationId = "com.uteke.conventionsample"
+        applicationId = "com.uteke.conventions.sample"
         minSdk = AppConfig.minSdk
         targetSdk = AppConfig.targetSdk
         versionCode = AppConfig.versionCode
@@ -25,13 +26,12 @@ android {
 
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_17
     }
 
     buildFeatures {
+        buildConfig = true
         viewBinding = true
     }
 }

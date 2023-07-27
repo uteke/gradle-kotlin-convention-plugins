@@ -1,9 +1,9 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    id("kotlin-conventions")
 }
 
-@Suppress("UnstableApiUsage")
 android {
     compileSdk = AppConfig.compileSdk
 
@@ -14,17 +14,11 @@ android {
 
     compileOptions {
         isCoreLibraryDesugaringEnabled = true
-        targetCompatibility = JavaVersion.VERSION_11
-        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
-
-    buildFeatures {
-        viewBinding = true
-    }
+    buildFeatures.viewBinding = true
 }
 
 dependencies {

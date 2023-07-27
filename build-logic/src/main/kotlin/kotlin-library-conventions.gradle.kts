@@ -1,10 +1,7 @@
 plugins {
     `java-library`
-    kotlin("jvm")
-}
-
-kotlin {
-    jvmToolchain(jdkVersion = 11)
+    id("kotlin")
+    id("kotlin-conventions")
 }
 
 task("testUnitTest") {

@@ -1,32 +1,36 @@
 [versions]
 androidxAppCompat = "1.6.1"
-androidxCompose = "2023.05.01"
+androidxCompose = "2023.06.01"
 androidxCoreKtx = "1.10.1"
 androidxConstraintLayout = "2.1.4"
-androidxNavigation = "2.5.3"
-androidxKotlinCompiler = "1.4.7"
+androidxNavigation = "2.6.0"
+androidxKotlinCompiler = "1.5.0"
 androidxTest = "1.5.2"
 androidxExt = "1.1.3"
 coroutinesTest = "1.6.4"
 desugar = "2.0.3"
 jUnit = "5.9.1"
-kotlin = "1.8.10"
-kotlinKsp = "1.8.10-1.0.9"
+kotlin = "1.9.0"
+kotlinKsp = "1.9.0-1.0.12"
 mockk = "1.13.5"
 googleMaterial = "1.9.0"
-gradle = "7.4.2"
+gradle = "8.1.0"
 
 [libraries]
 androidX-appCompat = { module = "androidx.appcompat:appcompat", version.ref = "androidxAppCompat" }
 androidX-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidxCompose" }
 androidX-compose-foundation = { module = "androidx.compose.foundation:foundation" }
+androidX-compose-material = { module = "androidx.compose.material:material" }
+androidX-compose-material3 = { module = "androidx.compose.material3:material3" }
+androidX-compose-uiTooling = { module = "androidx.compose.ui:ui-tooling" }
+androidX-compose-uiToolingPreview = { module = "androidx.compose.ui:ui-tooling-preview" }
+androidX-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "androidxKotlinCompiler" }
 androidX-constraintLayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidxConstraintLayout" }
 androidX-coreKtx = { module = "androidx.core:core-ktx", version.ref = "androidxCoreKtx" }
 androidX-navigation-fragment = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "androidxNavigation" }
 androidX-navigation-ui = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "androidxNavigation" }
 google-material = { module = "com.google.android.material:material", version.ref = "googleMaterial" }
 gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
-#gradleApi = { module = "com.android.tools.build:gradle-api", version.ref = "androidGradlePlugin" }
 desugar = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar" }
 
 test-jUnit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jUnit" }

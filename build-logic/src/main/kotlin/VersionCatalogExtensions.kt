@@ -17,8 +17,16 @@ internal val VersionCatalog.libDesugar: Provider<MinimalExternalModuleDependency
     get() = findLibraryOrThrow("desugar")
 internal val VersionCatalog.libAndroidxComposeBom: Provider<MinimalExternalModuleDependency>
     get() = findLibraryOrThrow("androidX-compose-bom")
+internal val VersionCatalog.libAndroidxComposeCompiler: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("androidX-compose-compiler")
 internal val VersionCatalog.libAndroidxComposeFoundation: Provider<MinimalExternalModuleDependency>
     get() = findLibraryOrThrow("androidX-compose-foundation")
+internal val VersionCatalog.libAndroidxComposeMaterial3: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("androidX-compose-material3")
+internal val VersionCatalog.libAndroidxComposeUiToolingPreview: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("androidX-compose-uiToolingPreview")
+internal val VersionCatalog.libAndroidxComposeUiTooling: Provider<MinimalExternalModuleDependency>
+    get() = findLibraryOrThrow("androidX-compose-uiTooling")
 internal val VersionCatalog.libTestJunitApi: Provider<MinimalExternalModuleDependency>
     get() = findLibraryOrThrow("test-jUnit-api")
 internal val VersionCatalog.libTestJunitEngine: Provider<MinimalExternalModuleDependency>
